@@ -19,8 +19,8 @@ export default function Page() {
   const VSL = VSLBlackNew;
   const videoId = "69ad614fa584f1a405fe5047";
   const backLink = `https://${host}/promo`;
-  const checkoutLink = "https://pay.hotmart.com/T104802295W";
-  const pitchTime = 780;
+  const checkoutLink = "https://pay.hotmart.com/T104802295W?off=zydpmhpm";
+  const pitchTime = 704;
 
   // VIDEO VERIFY
   useEffect(() => {

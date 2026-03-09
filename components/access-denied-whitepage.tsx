@@ -13,7 +13,7 @@ import {
 import Link from "next/link";
 import ConfettiEffect from "@/components/confetti";
 
-const CHECKOUT_URL = "https://teu_link_de_checkout_aqui";
+const CHECKOUT_URL = "https://pay.hotmart.com/T104802295W";
 
 export default function AccessDenied() {
   const features = [
@@ -75,18 +75,43 @@ export default function AccessDenied() {
   ];
 
   return (
-    <div className="w-full h-svh bg-black text-white relative overflow-x-hidden overflow-y-auto">
-      {/* Animated background grid */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,0,0,0.1) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(255,0,0,0.1) 1px, transparent 1px)`,
-            backgroundSize: "50px 50px",
-          }}
-        />
-      </div>
+    <div
+      className="w-full min-h-screen text-white relative overflow-x-hidden"
+      style={{
+        backgroundImage: `
+          radial-gradient(
+            circle at 20% 10%,
+            rgba(0, 0, 0, 0.45) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            circle at 80% 30%,
+            rgba(0, 0, 0, 0.4) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            circle at 15% 85%,
+            rgba(0, 0, 0, 0.5) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            circle at 90% 95%,
+            rgba(0, 0, 0, 0.55) 0%,
+            transparent 60%
+          ),
+          linear-gradient(
+            to bottom,
+            #500016 0%,
+            #430012 30%,
+            #36000f 60%,
+            #29000c 100%
+          )
+        `,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "100% 100%",
+        backgroundAttachment: "fixed",
+      }}
+    >
 
       {/* Red accent line (top of page) */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent pointer-events-none" />
@@ -106,25 +131,25 @@ export default function AccessDenied() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-red-600/50 bg-red-600/10 backdrop-blur-sm"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-green-500/50 bg-green-500/10 backdrop-blur-sm"
               >
-                <span className="h-2 w-2 rounded-full bg-red-600 animate-pulse" />
-                <span className="text-sm font-medium text-red-400">
-                  MASTERMIND PROGRAM
+                <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-sm font-medium text-green-300">
+                  GOOD FACELESS CHANNELS
                 </span>
               </motion.div>
 
               <h1 className="text-5xl md:text-7xl font-black tracking-tight">
-                <span className="bg-gradient-to-r from-white via-red-500 to-white bg-clip-text text-transparent">
-                  MASTERMIND
+                <span className="bg-gradient-to-r from-green-400 via-green-600 to-green-400 bg-clip-text text-transparent">
+                  GOOD FACELESS
                 </span>
                 <br />
-                <span className="text-white">FACELESS CHANNELS</span>
+                <span className="text-white">CHANNELS</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
                 Master the Faceless YouTube Automation and{" "}
-                <span className="text-red-500 font-semibold">
+                <span className="text-green-700 font-semibold">
                   maximize your account&apos;s visibility!
                 </span>
               </p>
@@ -138,11 +163,11 @@ export default function AccessDenied() {
               >
                 <button
                   onClick={() => window.open(CHECKOUT_URL, "_blank")}
-                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-red-600/50"
+                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/50"
                 >
                   <span>START YOUR JOURNEY</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  <div className="absolute inset-0 rounded-lg bg-red-600 blur-xl opacity-50 group-hover:opacity-75 transition-opacity -z-10" />
+                  <div className="absolute inset-0 rounded-lg bg-green-500 blur-xl opacity-50 group-hover:opacity-75 transition-opacity -z-10" />
                 </button>
               </motion.div>
             </motion.div>
@@ -159,7 +184,7 @@ export default function AccessDenied() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                What You&apos;ll <span className="text-red-600">Master</span>
+                What You&apos;ll <span className="text-green-700">Master</span>
               </h2>
               <p className="text-gray-400 text-lg">
                 Everything you need to dominate YouTube
@@ -207,10 +232,10 @@ export default function AccessDenied() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                Complete <span className="text-red-600">Learning Path</span>
+                Complete <span className="text-green-700">Learning Path</span>
               </h2>
               <p className="text-gray-400 text-lg">
-                Everything included in the Mastermind
+                Everything included in the Good Faceless Channels
               </p>
             </motion.div>
 
@@ -244,21 +269,21 @@ export default function AccessDenied() {
               className="space-y-6"
             >
               <h2 className="text-4xl md:text-6xl font-black">
-                Ready to <span className="text-red-600">Dominate</span> YouTube?
+                Ready to <span className="text-green-700">Dominate</span> YouTube?
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Join the Mastermind Faceless Channels program and transform your
+                Join the Good Faceless Channels program and transform your
                 YouTube presence into a revenue-generating machine.
               </p>
 
               <div className="pt-8">
                 <button
                   onClick={() => window.open(CHECKOUT_URL, "_blank")}
-                  className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold text-xl rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-red-600/50"
+                  className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold text-xl rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-green-500/50"
                 >
                   <span>GET STARTED NOW</span>
                   <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
-                  <div className="absolute inset-0 rounded-lg bg-red-600 blur-2xl opacity-60 group-hover:opacity-80 transition-opacity -z-10" />
+                  <div className="absolute inset-0 rounded-lg bg-green-500 blur-2xl opacity-60 group-hover:opacity-80 transition-opacity -z-10" />
                 </button>
               </div>
 
@@ -272,10 +297,7 @@ export default function AccessDenied() {
         <ConfettiEffect />
       </main>
 
-      <footer
-        className="relative z-10 w-full py-8 px-4"
-        style={{ backgroundColor: "#0A0A0A" }}
-      >
+      <footer className="relative z-10 w-full py-8 px-4">
         {/* Red divider line (footer boundary) */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent pointer-events-none" />
         <div className="max-w-3xl mx-auto text-center space-y-4">

@@ -13,18 +13,38 @@ export default function White() {
   ];
 
   return (
-    <div className="min-h-svh w-full bg-black text-white relative overflow-x-hidden overflow-y-auto">
-      {/* Animated background grid */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(rgba(255,0,0,0.1) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(255,0,0,0.1) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px'
-        }} />
+    <div className="min-h-svh w-full relative overflow-x-hidden overflow-y-auto bg-black text-white">
+      {/* Layered cinematic background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Soft vertical fade from deep black */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#05010c] to-black" />
+
+        {/* Corner gradient glows */}
+        <div className="absolute inset-0">
+          <div className="absolute -top-40 -left-32 h-80 w-80 rounded-[3rem] bg-gradient-to-br from-red-600/40 via-red-500/10 to-transparent blur-3xl" />
+          <div className="absolute -bottom-48 -right-24 h-96 w-96 rounded-[3rem] bg-gradient-to-tl from-red-900/50 via-red-700/10 to-transparent blur-3xl" />
+          <div className="absolute -top-32 right-1/3 h-64 w-64 rounded-full bg-gradient-to-b from-white/8 via-transparent to-transparent blur-3xl opacity-80" />
+        </div>
+
+        {/* Subtle noise + grid overlay */}
+        <div className="absolute inset-0 opacity-40 mix-blend-soft-light">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)`,
+              backgroundSize: "46px 46px",
+            }}
+          />
+        </div>
+
+        {/* Vignette on the edges for depth */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.06),_transparent_58%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(0,0,0,0.85),_transparent_60%)]" />
       </div>
 
       {/* Red accent line (top) */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-600/80 to-transparent pointer-events-none" />
 
       {/* Warning Banner */}
       <div className="relative z-10 w-full bg-red-600 text-white">

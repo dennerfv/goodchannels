@@ -54,7 +54,7 @@ export default function White() {
               If you have any questions or difficulties accessing, <u className="text-green-400">send an email to our support</u>:
             </p>
             <p>
-              — <strong className="text-green-400 hover:underline"><Link href="mailto:ayuda@ayudarewards.com">ayuda@ayudarewards.com</Link></strong>
+              — <strong className="text-green-400 hover:underline"><Link href="mailto:supportgoodchannels@gmail.com">supportgoodchannels@gmail.com</Link></strong>
             </p>
             <p>We will respond immediately and help you with everything you need.</p>
             <p className="text-white">A strong hug, see you on the platform to start studying!</p>
@@ -62,7 +62,7 @@ export default function White() {
               <p>If you want to access your members area directly, click the link below.</p>
               <p>But don&apos;t forget to check your email inbox to <u className="text-green-400">find your email and password</u>.</p>
               <Link
-                href="https://you-rewards.memberkit.com.br/"
+                href="https://productrewards.xmembers.com/home/the-rewards-product"
                 className="bg-green-600 hover:bg-green-700 text-white text-sm text-center font-extrabold rounded-lg mt-3 p-3 transition-colors"
               >
                 ✅ Click here to access the members area now!

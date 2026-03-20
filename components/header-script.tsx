@@ -1,7 +1,7 @@
 import Script from "next/script";
 
 const idList: Record<string, string> = {
-  new: "68d2918cf1f6ffb0ac84056b",
+  new: "",
 };
 
 export default function HeaderScript({ content }: { content: string }) {
